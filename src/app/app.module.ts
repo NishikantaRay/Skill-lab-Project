@@ -8,6 +8,11 @@ import { SignupComponent } from './home/signup/signup.component';
 import { HomeComponent } from './home/home/home.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { NavComponent } from './home/nav/nav.component';
+import { BookingComponent } from './home/booking/booking.component';
+import { CanteenComponent } from './home/canteen/canteen.component';
+import { AdminComponent } from './home/admin/admin.component';
+import { EventComponent } from './home/event/event.component';
+import { StatsComponent } from './home/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { NavComponent } from './home/nav/nav.component';
     SignupComponent,
     HomeComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    BookingComponent,
+    CanteenComponent,
+    AdminComponent,
+    EventComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
