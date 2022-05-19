@@ -8,7 +8,10 @@
                     <!-- Contact Form -->
                     <form id="contact-form" class="form contact-form">
                         <div class="row">
-                            
+                            <div class="form-group col-12">
+                                <input type="text" name="con_name" class="form-control" id="first-name"
+                                    placeholder="Name" required="required">
+                            </div>
                             <div class="form-group col-12 mt-4">
                                 <input type="email" name="con_email" class="form-control" id="email"
                                     placeholder="Email" required="required">
@@ -24,7 +27,7 @@
                                     <p class="form-messege"></p>
                                 </div>
                             </div>
-                            <p class="text-center">Don't have an account ? <a href="">Sign in</a></p>
+                            <p class="text-center">Don't have an account ? <a routerLink="/login">Sign in</a></p>
                         </div>
                     </form>
                     <!-- Contact Form -->

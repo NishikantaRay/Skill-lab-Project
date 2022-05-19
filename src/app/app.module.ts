@@ -13,6 +13,11 @@ import { CanteenComponent } from './home/canteen/canteen.component';
 import { AdminComponent } from './home/admin/admin.component';
 import { EventComponent } from './home/event/event.component';
 import { StatsComponent } from './home/stats/stats.component';
+import { WorkingComponent } from './home/working/working.component';
+import { TeamComponent } from './home/team/team.component';
+import { FeaturesComponent } from './home/features/features.component';
+import { AboutComponent } from './home/about/about.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { StatsComponent } from './home/stats/stats.component';
     CanteenComponent,
     AdminComponent,
     EventComponent,
-    StatsComponent
+    StatsComponent,
+    WorkingComponent,
+    TeamComponent,
+    FeaturesComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
