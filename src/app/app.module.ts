@@ -20,6 +20,7 @@ import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { UpdateBookingComponent } from './home/update-booking/update-booking.component';
 import { AlleventlistComponent } from './home/alleventlist/alleventlist.component';
+import { SawoComponent } from './home/sawo/sawo.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AlleventlistComponent } from './home/alleventlist/alleventlist.componen
     AboutComponent,
     ContactComponent,
     UpdateBookingComponent,
-    AlleventlistComponent
+    AlleventlistComponent,
+    SawoComponent
   ],
   imports: [
     BrowserModule,
