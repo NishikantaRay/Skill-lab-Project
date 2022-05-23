@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './home/about/about.component';
 import { AdminComponent } from './home/admin/admin.component';
+import { AlleventlistComponent } from './home/alleventlist/alleventlist.component';
 import { BookingComponent } from './home/booking/booking.component';
 import { CanteenComponent } from './home/canteen/canteen.component';
 import { ContactComponent } from './home/contact/contact.component';
@@ -14,12 +15,14 @@ import { NavComponent } from './home/nav/nav.component';
 import { SignupComponent } from './home/signup/signup.component';
 import { StatsComponent } from './home/stats/stats.component';
 import { TeamComponent } from './home/team/team.component';
+import { UpdateBookingComponent } from './home/update-booking/update-booking.component';
 import { WorkingComponent } from './home/working/working.component';
 
 const routes: Routes = [ 
 { path: 'login', component: LoginComponent},
 {path:'signup',component:SignupComponent} ,
 {path:'book',component:BookingComponent},
+{path:'updatebook',component:UpdateBookingComponent},
 {path:'canteen',component:CanteenComponent},
 {path:'admin',component:AdminComponent},
 {path:'event',component:EventComponent},
@@ -29,9 +32,10 @@ const routes: Routes = [
 {path:'feature',component:FeaturesComponent},
 {path:'about',component:AboutComponent},
 {path:'nav',component:NavComponent},
-{path:'footer',component:FooterComponent},
+{path:'footer',component:FooterComponent}, 
 {path:'home',component:HomeComponent},
 {path:'contact',component:ContactComponent},
+{path:'eventlist',component:AlleventlistComponent},
 { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

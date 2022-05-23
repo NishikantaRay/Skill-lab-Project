@@ -18,6 +18,8 @@ import { TeamComponent } from './home/team/team.component';
 import { FeaturesComponent } from './home/features/features.component';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
+import { UpdateBookingComponent } from './home/update-booking/update-booking.component';
+import { AlleventlistComponent } from './home/alleventlist/alleventlist.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ContactComponent } from './home/contact/contact.component';
     TeamComponent,
     FeaturesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    UpdateBookingComponent,
+    AlleventlistComponent
   ],
   imports: [
     BrowserModule,
