@@ -12,6 +12,7 @@ import { FooterComponent } from './home/footer/footer.component';
 import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './home/login/login.component';
 import { NavComponent } from './home/nav/nav.component';
+import { SawoComponent } from './home/sawo/sawo.component';
 import { SignupComponent } from './home/signup/signup.component';
 import { StatsComponent } from './home/stats/stats.component';
 import { TeamComponent } from './home/team/team.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
 {path:'home',component:HomeComponent},
 {path:'contact',component:ContactComponent},
 {path:'eventlist',component:AlleventlistComponent},
+{path:'sawo',component:SawoComponent},
 { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

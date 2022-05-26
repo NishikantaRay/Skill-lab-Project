@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './home/login/login.component';
@@ -21,6 +21,7 @@ import { ContactComponent } from './home/contact/contact.component';
 import { UpdateBookingComponent } from './home/update-booking/update-booking.component';
 import { AlleventlistComponent } from './home/alleventlist/alleventlist.component';
 import { SawoComponent } from './home/sawo/sawo.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { SawoComponent } from './home/sawo/sawo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

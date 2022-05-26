@@ -5,15 +5,17 @@
             <div class="col-md-9 pt-3">
                 <div class="contact-wrap">
                     <!-- Contact Form -->
-                    <form id="contact-form" class="form contact-form">
+                    <form id="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form contact-form">
                         <div class="row">
                             <h3>Canteen  Form</h3>
+                            <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
+                            <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
                             <div class="form-group col-12 mt-4">
-                                <input type="text" name="con_text" class="form-control" id="text"
+                                <input type="text" name="con_text" formControlName="eventTitle" class="form-control" id="text"
                                     placeholder="Enter title of your event" required="required">
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="text" name="con_text" class="form-control" id="text"
+                                <input type="text" name="con_text" formControlName="eventTpart" class="form-control" id="text"
                                     placeholder="Enter the total number of participants" required="required">
                             </div>
                             
@@ -42,7 +44,7 @@
                             </div>
                             
                             <div class="form-group description col-12 mbnone mt-4">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" formControlName="eventMenu" aria-label="Default select example">
                                     <option selected>Choose here your menu</option>
                                     <option value="1">Breakfast</option>
                                     <option value="2">Lunch</option>
@@ -50,7 +52,7 @@
                                   </select>
                             </div>
                             <div class="form-group description col-12 mbnone mt-4">
-                                <textarea rows="2" name="con_message" class="form-control" id="description"
+                                <textarea rows="2" formControlName="eventMenuDetails" name="con_message" class="form-control" id="description"
                                     placeholder="Enter Details of your Food" required="required"></textarea>
                             </div> 
                             

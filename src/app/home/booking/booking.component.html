@@ -4,49 +4,51 @@
             <div class="col-md-3"></div>
             <div class="col-md-9 pt-3">
                 <div class="contact-wrap">
+                    <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
+                    <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
                     <!-- Contact Form -->
-                    <form id="contact-form" class="form contact-form">
+                    <form id="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form contact-form">
                         <div class="row">
                             <h3>Event Booking Form</h3>
                             <div class="form-group col-12 mt-4">
-                                <input type="text" name="con_text" class="form-control" id="text"
+                                <input type="text" formControlName="eventTitle" name="con_text" class="form-control" id="text"
                                     placeholder="Enter title of your event" required="required">
                             </div>
                             <div class="form-group description col-12 mbnone mt-4">
-                                <textarea rows="2" name="con_message" class="form-control" id="description"
+                                <textarea rows="2" formControlName="eventDesc" name="con_message" class="form-control" id="description"
                                     placeholder="Enter Description of your Event" required="required"></textarea>
                             </div>
                             <div class="form-group description col-12 mbnone mt-4">
-                                <textarea rows="2" name="con_message" class="form-control" id="description"
+                                <textarea rows="2" formControlName="eventGuest" name="con_message" class="form-control" id="description"
                                     placeholder="Enter Details of your Guest" required="required"></textarea>
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="text" name="con_text" class="form-control" id="text"
+                                <input type="text" formControlName="eventTpart" name="con_text" class="form-control" id="text"
                                     placeholder="Enter the total number of participants" required="required">
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group col-12 mt-4">
                                         <label for="starting time"> Starting time</label>
-                                        <input type="time" name="con_text" class="form-control" id="text"
+                                        <input type="time" formControlName="eventStime" name="con_text" class="form-control" id="text"
                                             placeholder="Starting time" required="required">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group col-12 mt-4">
                                         <label for="starting time"> Ending  time</label>
-                                        <input type="time" name="con_text" class="form-control" id="text"
+                                        <input type="time" formControlName="eventEtime" name="con_text" class="form-control" id="text"
                                             placeholder="Ending time" required="required">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col-12 mt-4">
                                 <label for="starting time"> Date</label>
-                                <input type="date" name="con_text" class="form-control" id="text"
+                                <input type="date" formControlName="eventDate" name="con_text" class="form-control" id="text"
                                     placeholder="Ending time" required="required">
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="text" name="con_text" class="form-control" id="text"
+                                <input type="text" formControlName="eventVenue" name="con_text" class="form-control" id="text"
                                     placeholder="Enter the venue" required="required">
                             </div>
                             <div class="col-12 mt-4">
