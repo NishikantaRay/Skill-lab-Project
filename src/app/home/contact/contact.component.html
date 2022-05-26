@@ -16,19 +16,21 @@
             <div class="col-12">
                 <div class="contact-wrap">
                     <!-- Contact Form -->
-                    <form id="contact-form" class="form contact-form"
+                    <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
+                            <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
+                    <form id="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form contact-form"
                         action="">
                         <div class="row">
                             <div class="form-group col-12">
-                                <input type="text" name="con_name" class="form-control" id="first-name"
+                                <input type="text" name="con_name" formControlName="eventName" class="form-control" id="first-name"
                                     placeholder="Name" required="required">
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="email" name="con_email" class="form-control" id="email"
+                                <input type="email" name="con_email" formControlName="eventEmail" class="form-control" id="email"
                                     placeholder="Email" required="required">
                             </div>
                             <div class="form-group description col-12 mbnone mt-4">
-                                <textarea rows="3" name="con_message" class="form-control" id="description"
+                                <textarea rows="3" name="con_message" formControlName="eventMsg" class="form-control" id="description"
                                     placeholder="Message" required="required"></textarea>
                             </div>
                             <div class="col-12 mt-4">
