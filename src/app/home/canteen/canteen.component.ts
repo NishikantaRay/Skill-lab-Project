@@ -18,6 +18,7 @@ export class CanteenComponent implements OnInit {
     eventFchoice: ['Veg'],
     eventMenu: ['', Validators.required],
     eventMenuDetails: ['', Validators.required],
+    isApproved: ['Pending'],
   })
   constructor(private fb: FormBuilder,private _userService:CanteendataService) { }
 

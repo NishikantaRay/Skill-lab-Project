@@ -1,11 +1,12 @@
 <div id="contact" class="contact-area pt-125" >
     <div class="container">
+        <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
+        <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-9 pt-3">
                 <div class="contact-wrap">
-                    <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
-                    <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
+                   
                     <!-- Contact Form -->
                     <form id="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form contact-form">
                         <div class="row">

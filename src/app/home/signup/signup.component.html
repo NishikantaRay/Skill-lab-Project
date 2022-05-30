@@ -6,18 +6,21 @@
             <div class="col-lg-9 pt-3">
                 <div class="contact-wrap">
                     <!-- Contact Form -->
-                    <form id="contact-form" class="form contact-form">
+                    
+                    <form id="contact-form" [formGroup]="profileForm" (ngSubmit)="onSubmitForm()"  class="form contact-form">
+                        <div [class]="isError?'alert alert-danger':'d-none'">{{message}}</div>
+                        <div [class]="isSuccess?'alert alert-success':'d-none'">{{message}}</div>
                         <div class="row">
                             <div class="form-group col-12">
-                                <input type="text" name="con_name" class="form-control" id="first-name"
+                                <input type="text" formControlName="name" name="con_name" class="form-control" id="first-name"
                                     placeholder="Name" required="required">
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="email" name="con_email" class="form-control" id="email"
+                                <input type="email" formControlName="email" name="con_email" class="form-control" id="email"
                                     placeholder="Email" required="required">
                             </div>
                             <div class="form-group col-12 mt-4">
-                                <input type="password" name="con_email" class="form-control" id="email"
+                                <input type="password" formControlName="password" name="con_email" class="form-control" id="email"
                                     placeholder="Password" required="required">
                             </div>
                             <div class="col-12 mt-4">

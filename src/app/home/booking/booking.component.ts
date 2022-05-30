@@ -20,7 +20,7 @@ export class BookingComponent implements OnInit {
     eventEtime: ['', Validators.required],
     eventDate: ['', Validators.required],
     eventVenue: ['', Validators.required],
-    isApproved: [0],
+    isApproved: ['Pending'],
   })
   constructor(private fb: FormBuilder,private _userService:BookdataService) { }
 
