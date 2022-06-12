@@ -15,7 +15,7 @@ export class CanteenComponent implements OnInit {
   profileForm = this.fb.group({
     eventTitle: ['', Validators.required],
     eventTpart: ['', Validators.required],
-    eventFchoice: ['Veg'],
+    eventFchoice: ['Veg/Nonveg'],
     eventMenu: ['', Validators.required],
     eventMenuDetails: ['', Validators.required],
     isApproved: ['Pending'],
